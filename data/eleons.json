@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Abyssnaw",
+    "types": ["water"]
+  },
+  {
+    "name": "Admerrull",
+    "types": ["flying"]
+  },
+  {
+    "name": "Aquietus",
+    "types": ["water"]
+  },
+  {
+    "name": "Arraknit",
+    "types": ["bug"]
+  },
+  {
+    "name": "Bastolith",
+    "types": ["bug"]
+  },
+  {
+    "name": "Boogihop",
+    "types": ["normal"]
+  },
+  {
+    "name": "Cascub",
+    "types": ["water"]
+  },
+  {
+    "name": "Cerberio",
+    "types": ["water, fire, electric"]
+  },
+  {
+    "name": "Chirrook",
+    "types": ["flying"]
+  },
+  {
+    "name": "Dark Argarfio",
+    "types": ["flying", "dark"]
+  },
+  {
+    "name": "Discorch",
+    "types": ["fire"]
+  },
+  {
+    "name": "Faellion",
+    "types": ["normal"]
+  },
+  {
+    "name": "Freever",
+    "types": ["water"]
+  },
+  {
+    "name": "Glassora (offensive)",
+    "types": ["normal"]
+  },
+  {
+    "name": "Glustarch",
+    "types": ["dark"]
+  },
+  {
+    "name": "Growlet",
+    "types": ["flying"]
+  },
+  {
+    "name": "Heirnite",
+    "types": ["normal"]
+  },
+  {
+    "name": "Heirysalis",
+    "types": ["normal"]
+  },
+  {
+    "name": "Igniram",
+    "types": ["fire"]
+  },
+  {
+    "name": "Jestigator",
+    "types": ["normal"]
+  },
+  {
+    "name": "Lilibud",
+    "types": ["grass"]
+  },
+  {
+    "name": "Lunalis",
+    "types": ["normal"]
+  },
+  {
+    "name": "Lurmaw",
+    "types": ["grass"]
+  },
+  {
+    "name": "Marchess",
+    "types": ["normal"]
+  },
+  {
+    "name": "Marimoth",
+    "types": ["bug", "flying"]
+  },
+  {
+    "name": "Minarch",
+    "types": ["normal"]
+  },
+  {
+    "name": "Moankanter",
+    "types": ["normal"]
+  },
+  {
+    "name": "Morfur",
+    "types": ["normal"]
+  },
+  {
+    "name": "Morlidae",
+    "types": ["grass"]
+  },
+  {
+    "name": "Mormancy",
+    "types": ["normal"]
+  },
+  {
+    "name": "Morswept",
+    "types": ["normal"]
+  },
+  {
+    "name": "Morterra",
+    "types": ["dark"]
+  },
+  {
+    "name": "Narcloak",
+    "types": ["normal"]
+  },
+  {
+    "name": "Nautitan",
+    "types": ["water"]
+  },
+  {
+    "name": "Ninark",
+    "types": ["normal"]
+  },
+  {
+    "name": "Nocturkle",
+    "types": ["dark"]
+  },
+  {
+    "name": "Nymantid",
+    "types": ["grass"]
+  },
+  {
+    "name": "Palmoko",
+    "types": ["grass"]
+  },
+  {
+    "name": "Pinnux",
+    "types": ["water"]
+  },
+  {
+    "name": "Pyraglyph",
+    "types": ["normal"]
+  },
+  {
+    "name": "Pyrurnace",
+    "types": ["fire"]
+  },
+  {
+    "name": "Quibble",
+    "types": ["normal"]
+  },
+  {
+    "name": "Quinferno",
+    "types": ["fire"]
+  },
+  {
+    "name": "Rhiron",
+    "types": ["normal"]
+  },
+  {
+    "name": "Rootitan",
+    "types": ["normal"]
+  },
+  {
+    "name": "Ropyrus",
+    "types": ["fire"]
+  },
+  {
+    "name": "Scoraptor",
+    "types": ["fire"]
+  },
+  {
+    "name": "Sephrodite",
+    "types": ["normal"]
+  },
+  {
+    "name": "Serpalisk",
+    "types": ["normal"]
+  },
+  {
+    "name": "Spoilurk",
+    "types": ["normal"]
+  },
+  {
+    "name": "Squalleer",
+    "types": ["flying"]
+  },
+  {
+    "name": "Squipup",
+    "types": ["normal"]
+  },
+  {
+    "name": "Syrinfly",
+    "types": ["bug"]
+  },
+  {
+    "name": "Timpel",
+    "types": ["bug"]
+  },
+  {
+    "name": "Toxplash",
+    "types": ["normal"]
+  },
+  {
+    "name": "Valograr",
+    "types": ["normal"]
+  },
+  {
+    "name": "Valuchar",
+    "types": ["normal"]
+  },
+  {
+    "name": "Victrious",
+    "types": ["normal"]
+  },
+  {
+    "name": "Vinuki",
+    "types": ["grass"]
+  },
+  {
+    "name": "Yawnito",
+    "types": ["normal"]
+  }
+]

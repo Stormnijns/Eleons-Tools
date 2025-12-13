@@ -1,0 +1,129 @@
+{
+  "bas": {
+    "color": "#878E98",
+    "chart-data": {
+      "bas": 1, "dar": 1, "ele": 1, "geo": 1, "hyd": 1, "ice": 1, "lig": 1, "mar": 1,
+      "met": 1, "mys": 0.5, "nat": 1, "psy": 1, "pyr": 1, "sou": 0, "tox": 1, "win": 1
+    }
+  },
+
+  "dar": {
+    "color": "#605041",
+    "chart-data": {
+      "bas": 1, "dar": 0.5, "ele": 1, "geo": 1, "hyd": 1, "ice": 1, "lig": 2, "mar": 1,
+      "met": 1, "mys": 1, "nat": 2, "psy": 1, "pyr": 1, "sou": 0.5, "tox": 1, "win": 1
+    }
+  },
+
+  "ele": {
+    "color": "#ECC953",
+    "chart-data": {
+      "bas": 1, "dar": 1, "ele": 1, "geo": 0, "hyd": 2, "ice": 1, "lig": 1, "mar": 1,
+      "met": 2, "mys": 1, "nat": 0.5, "psy": 1, "pyr": 1, "sou": 1, "tox": 1, "win": 2
+    }
+  },
+
+  "geo": {
+    "color": "#D9C17A",
+    "chart-data": {
+      "bas": 1, "dar": 1, "ele": 2, "geo": 1, "hyd": 0.5, "ice": 1, "lig": 1, "mar": 1,
+      "met": 1, "mys": 1, "nat": 1, "psy": 1, "pyr": 2, "sou": 1, "tox": 1, "win": 2
+    }
+  },
+
+  "hyd": {
+    "color": "#4A79D8",
+    "chart-data": {
+      "bas": 1, "dar": 1, "ele": 2, "geo": 2, "hyd": 0.5, "ice": 0.5, "lig": 1, "mar": 1,
+      "met": 1, "mys": 0.5, "nat": 0.5, "psy": 1, "pyr": 2, "sou": 1, "tox": 1, "win": 1
+    }
+  },
+
+  "ice": {
+    "color": "#9ED8D8",
+    "chart-data": {
+      "bas": 1, "dar": 1, "ele": 1, "geo": 2, "hyd": 1, "ice": 0.5, "lig": 1, "mar": 1,
+      "met": 1, "mys": 1, "nat": 2, "psy": 1, "pyr": 1, "sou": 1, "tox": 1, "win": 2
+    }
+  },
+
+  "lig": {
+    "color": "#E6D29C",
+    "chart-data": {
+      "bas": 1, "dar": 2, "ele": 1, "geo": 1, "hyd": 1, "ice": 1, "lig": 0.5, "mar": 1,
+      "met": 1, "mys": 1, "nat": 0.5, "psy": 1, "pyr": 1, "sou": 2, "tox": 1, "win": 1
+    }
+  },
+
+  "mar": {
+    "color": "#B23A2E",
+    "chart-data": {
+      "bas": 2, "dar": 1, "ele": 1, "geo": 2, "hyd": 0.5, "ice": 2, "lig": 1, "mar": 1,
+      "met": 2, "mys": 1, "nat": 1, "psy": 0.5, "pyr": 1, "sou": 0, "tox": 1, "win": 0.5
+    }
+  },
+
+  "met": {
+    "color": "#8A8E8F",
+    "chart-data": {
+      "bas": 1, "dar": 1, "ele": 0.5, "geo": 0.5, "hyd": 1, "ice": 2, "lig": 1, "mar": 0.5,
+      "met": 1, "mys": 2, "nat": 1, "psy": 2, "pyr": 0.5, "sou": 1, "tox": 1, "win": 1
+    }
+  },
+
+  "mys": {
+    "color": "#3F6F55",
+    "chart-data": {
+      "bas": 1, "dar": 1, "ele": 1, "geo": 1, "hyd": 2, "ice": 1, "lig": 1, "mar": 0.5,
+      "met": 0.5, "mys": 2, "nat": 0.5, "psy": 2, "pyr": 2, "sou": 0.5, "tox": 1, "win": 1
+    }
+  },
+
+  "nat": {
+    "color": "#80BE59",
+    "chart-data": {
+      "bas": 1, "dar": 0.5, "ele": 1, "geo": 2, "hyd": 2, "ice": 1, "lig": 2, "mar": 1,
+      "met": 1, "mys": 2, "nat": 0.5, "psy": 1, "pyr": 0.5, "sou": 1, "tox": 0.5, "win": 1
+    }
+  },
+
+  "psy": {
+    "color": "#E96A8D",
+    "chart-data": {
+      "bas": 2, "dar": 0.5, "ele": 1, "geo": 1, "hyd": 1, "ice": 1, "lig": 2, "mar": 2,
+      "met": 1, "mys": 0.5, "nat": 1, "psy": 0.5, "pyr": 1, "sou": 2, "tox": 1, "win": 1
+    }
+  },
+
+  "pyr": {
+    "color": "#E28A3B",
+    "chart-data": {
+      "bas": 1, "dar": 2, "ele": 1, "geo": 0.5, "hyd": 0.5, "ice": 2, "lig": 0.5, "mar": 1,
+      "met": 2, "mys": 0.5, "nat": 2, "psy": 1, "pyr": 0.5, "sou": 1, "tox": 2, "win": 2
+    }
+  },
+
+  "sou": {
+    "color": "#6A4FA3",
+    "chart-data": {
+      "bas": 0, "dar": 2, "ele": 1, "geo": 1, "hyd": 1, "ice": 1, "lig": 0.5, "mar": 1,
+      "met": 1, "mys": 0.5, "nat": 1, "psy": 2, "pyr": 1, "sou": 2, "tox": 2, "win": 1
+    }
+  },
+
+  "tox": {
+    "color": "#9C4AA5",
+    "chart-data": {
+      "bas": 1, "dar": 1, "ele": 1, "geo": 1, "hyd": 2, "ice": 1, "lig": 1, "mar": 2,
+      "met": 0.5, "mys": 1, "nat": 2, "psy": 1, "pyr": 1, "sou": 0.5, "tox": 0.5, "win": 1
+    }
+  },
+
+  "win": {
+    "color": "#BFE6E2",
+    "chart-data": {
+      "bas": 1, "dar": 1, "ele": 1, "geo": 1, "hyd": 1, "ice": 1, "lig": 1, "mar": 1,
+      "met": 0.5, "mys": 1, "nat": 2, "psy": 1, "pyr": 2, "sou": 1, "tox": 1, "win": 0.5
+    }
+  }
+}

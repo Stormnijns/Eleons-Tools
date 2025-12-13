@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#layout {
+    display: flex;
+    gap: 40px;
+}
+
+
+#team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+
+.slot {
+    position: relative;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.input-wrapper img {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;        /* image never steals width */
+}
+
+.slot input {
+    flex: 1;              /* input fills remaining space */
+    min-width: 0;         /* IMPORTANT for flex layouts */
+    padding: 8px;
+}
+
+
+
+.autocomplete {
+    position: absolute;
+    background: #222;
+    border: 1px solid #444;
+    width: 100%;
+    z-index: 10;
+}
+
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+.option img {
+    width: 32px;
+    height: 32px;
+}
+
+
+.option:hover {
+    background: #333;
+}
+
+
+#dex {
+    width: 220px;
+    max-height: 420px;
+    overflow-y: auto;
+    border: 1px solid #333;
+    padding: 10px;
+
+    position: absolute;
+    right: 1%;
+}
+
+
+#dexList .option {
+    cursor: default;
+}
+
+
+#results {
+    margin-top: 30px;
+}
+
+.typeChart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#typeChartContainer {
+    margin-top: 2vh;
+    overflow-x: auto;
+}
+
+.type-table {
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.type-table th,
+.type-table td {
+    border: 1px solid #222;
+    padding: .5vh 0;
+    text-align: center;
+    width: 5vh;
+    border-radius: 3px;
+}
+
+/* Header cells */
+.type-table th {
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+/* Left-side DEFENSE labels */
+.type-label {
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 1vh;
+}
+
+/* Cell colors */
+.cell-0 {
+    background: orange;
+    color: black;
+}
+
+.cell-05 {
+    background: #c0392b; /* red */
+    color: #fff;
+}
+
+.cell-1 {
+    background: #111;
+    color: #ccc;
+}
+
+.cell-2 {
+    background: #27ae60; /* green */
+    color: #fff;
+}
+
+@media screen and (width < 1250px) {
+    #dex {
+        position: relative;
+        width: 100%;
+    }
+    .type-table {
+        font-size: .5em;
+    }
+}
+
