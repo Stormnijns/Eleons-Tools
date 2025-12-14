@@ -12,6 +12,20 @@ async function loadData() {
     buildTypeChartTable(); // ✅ add this
 }
 
+function createTypeIcons(types) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'type-icons';
+
+    types.forEach(type => {
+        const img = document.createElement('img');
+        img.src = `typeImages/${type}.png`;
+        img.alt = type;
+        wrapper.appendChild(img);
+    });
+
+    return wrapper;
+}
+
 
 function setupInputs() {
     document.querySelectorAll('.slot').forEach((slot, index) => {
@@ -45,9 +59,8 @@ function setupInputs() {
 
 
 function handleInput(input, icon, box, index) {
-    const value = input.value.toLowerCase();
+    const value = input.value.toLowerCase().trim();
     box.innerHTML = '';
-
 
     if (!value) {
         icon.style.visibility = 'hidden';
@@ -56,23 +69,48 @@ function handleInput(input, icon, box, index) {
         return;
     }
 
+    const matches = pokemonData.filter(p =>
+        p.name.toLowerCase().startsWith(value)
+    );
 
-    const matches = pokemonData.filter(p => p.name.toLowerCase().startsWith(value));
-
-
+    // AUTOCOMPLETE LIST
     matches.forEach(p => {
         const div = document.createElement('div');
         div.className = 'option';
-        div.innerHTML = `<img src="images/${p.name}.png"><span>${p.name}</span>`;
+
+        const img = document.createElement('img');
+        img.src = `images/${p.name}.png`;
+
+        const name = document.createElement('span');
+        name.textContent = p.name;
+
+        const typeIcons = createTypeIcons(p.types);
+
+        div.appendChild(img);
+        div.appendChild(name);
+        div.appendChild(typeIcons);
 
 
         div.onclick = () => selectPokemon(p, input, icon, box, index);
         box.appendChild(div);
     });
 
-
     box.style.display = matches.length ? 'block' : 'none';
+
+    // ✅ EXACT MATCH AUTO-SELECT
+    const exact = pokemonData.find(
+        p => p.name.toLowerCase() === value
+    );
+
+    if (exact) {
+        icon.src = `images/${exact.name}.png`;
+        icon.style.visibility = 'visible';
+        team[index] = exact;
+        box.style.display = 'none';
+        updateResults();
+    }
 }
+
 
 
 function selectPokemon(p, input, icon, box, index) {
@@ -92,7 +130,18 @@ function populateDex() {
     pokemonData.forEach(p => {
         const div = document.createElement('div');
         div.className = 'option';
-        div.innerHTML = `<img src="images/${p.name}.png"><span>${p.name}</span>`;
+        const img = document.createElement('img');
+        img.src = `images/${p.name}.png`;
+
+        const name = document.createElement('span');
+        name.textContent = p.name;
+
+        const typeIcons = createTypeIcons(p.types);
+
+        div.appendChild(img);
+        div.appendChild(name);
+        div.appendChild(typeIcons);
+
         dex.appendChild(div);
     });
 }
@@ -100,42 +149,50 @@ function populateDex() {
 
 function updateResults() {
     const totals = {};
-    Object.keys(typeChart).forEach(type => totals[type] = 0);
 
-
-    team.filter(Boolean).forEach(p => {
-        p.types.forEach(ptype => {
-            Object.entries(typeChart[ptype]["chart-data"]).forEach(([target, value]) => {
-                totals[target] += value;
-            });
-        });
+    // initialize totals
+    Object.keys(typeChart).forEach(type => {
+        totals[type] = 0;
     });
 
+    team.filter(Boolean).forEach(pokemon => {
+        pokemon.types.forEach(defType => {
+
+            Object.entries(typeChart).forEach(([atkType, atkData]) => {
+                const value = atkData["chart-data"][defType];
+
+                if (value === 2) totals[atkType] += 1;
+                else if (value === 0.5) totals[atkType] -= 1;
+                else if (value === 0) totals[atkType] -= 2;
+            });
+
+        });
+    });
 
     const effective = [];
     const weak = [];
     const neutral = [];
 
-
-    Object.entries(totals).forEach(([type, value]) => {
-        if (value > 0) effective.push(type);
-        else if (value < 0) weak.push(type);
+    Object.entries(totals).forEach(([type, score]) => {
+        if (score > 0) effective.push(type);
+        else if (score < 0) weak.push(type);
         else neutral.push(type);
     });
 
     const allTypes = Object.keys(totals);
 
-    function formatResult(list) {
+    function format(list) {
         if (list.length === 0) return 'Nothing';
         if (list.length === allTypes.length) return 'Everything';
         return list.join(', ');
     }
 
-    document.getElementById('effective').textContent = formatResult(effective);
-    document.getElementById('weak').textContent = formatResult(weak);
-    document.getElementById('neutral').textContent = formatResult(neutral);
-
+    document.getElementById('effective').textContent = format(effective);
+    document.getElementById('weak').textContent = format(weak);
+    document.getElementById('neutral').textContent = format(neutral);
 }
+
+
 
 function buildTypeChartTable() {
     const container = document.getElementById('typeChartContainer');
