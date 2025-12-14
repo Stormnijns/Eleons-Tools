@@ -157,15 +157,12 @@ function updateResults() {
 
     team.filter(Boolean).forEach(pokemon => {
         pokemon.types.forEach(defType => {
-
             Object.entries(typeChart).forEach(([atkType, atkData]) => {
                 const value = atkData["chart-data"][defType];
-
                 if (value === 2) totals[atkType] += 1;
                 else if (value === 0.5) totals[atkType] -= 1;
                 else if (value === 0) totals[atkType] -= 2;
             });
-
         });
     });
 
@@ -181,18 +178,37 @@ function updateResults() {
 
     const allTypes = Object.keys(totals);
 
-    function format(list) {
-        if (list.length === 0) return 'Nothing';
-        if (list.length === allTypes.length) return 'Everything';
-        return list.join(', ');
+    function createTypeImages(list) {
+        const container = document.createElement('div');
+        container.className = 'result-types';
+        if (list.length === 0) {
+            container.textContent = 'Nothing';
+        } else if (list.length === allTypes.length) {
+            container.textContent = 'Everything';
+        } else {
+            list.forEach(type => {
+                const img = document.createElement('img');
+                img.src = `typeImages/${type}.png`;
+                img.alt = type;
+                img.title = type.toUpperCase();
+                container.appendChild(img);
+            });
+        }
+        return container;
     }
 
-    document.getElementById('effective').textContent = format(effective);
-    document.getElementById('weak').textContent = format(weak);
-    document.getElementById('neutral').textContent = format(neutral);
+    const effectiveDiv = document.getElementById('effective');
+    effectiveDiv.innerHTML = '';
+    effectiveDiv.appendChild(createTypeImages(effective));
+
+    const weakDiv = document.getElementById('weak');
+    weakDiv.innerHTML = '';
+    weakDiv.appendChild(createTypeImages(weak));
+
+    const neutralDiv = document.getElementById('neutral');
+    neutralDiv.innerHTML = '';
+    neutralDiv.appendChild(createTypeImages(neutral));
 }
-
-
 
 function buildTypeChartTable() {
     const container = document.getElementById('typeChartContainer');

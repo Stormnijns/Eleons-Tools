@@ -168,3 +168,15 @@ body {
     }
 }
 
+
+.result-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.result-types img {
+    width: 32px;
+    height: 32px;
+}
